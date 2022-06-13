@@ -4,13 +4,8 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import util.CsvParser;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class NowParser {
@@ -36,7 +31,6 @@ public class NowParser {
             index++;
         }
 
-        List<Map<String,String>> jsonMap = new ArrayList<>();
         for(int i=0; i<jsonArray.size(); i++) {
             Map<String, Object> getObj = (HashMap<String, Object>) jsonArray.get(i);
             String id = (String) getObj.get("id");
